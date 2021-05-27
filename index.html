@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photograph Sales</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1><a href="#">Photograph Sales</a></h1>
+            <nav>
+                <ul class="menu">
+                    <li><img src="images/login.png">会員登録 / ログイン</li>
+                    <li><img src="images/cart.png">カートに入れる</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- TODO: section？ -->
+            <section class="jumbotron">
+                <div class="jumbotron-img"></div>
+                <p class="jumbotron-logo"><img src="images/main-logo.png"></p>
+            </section>
+
+            <section class="search section">
+                <p class="search-title">KEYWORD</p>
+                <form class="search-form" action="#">
+                    <input class="search-input" type="text" placeholder="検索キーワードをいれてください">
+                    <!-- <input class="submit" type="submit" value=""> -->
+                </form>
+            </section>
+
+            <section class="pickup section">
+                <div class="section-title">
+                    <div class="title">
+                        <h2>Pick Up</h2>
+                        <div class="h2-icon"><img src="images/pickup.png"></div>
+                    </div>
+                    <div class="desc">
+                        <p>Photograph Salesからダウンロードされた、人気の写真をランダムにご紹介。</p>
+                    </div>
+                </div>
+                <div class="section-body">
+                    <div class="random-pic">
+                        <p><img src="images/atticroom.jpg"></p>
+                        <p><img src="images/cat_hankachi.jpg"></p>
+                        <p><img src="images/kabocha.jpg"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newphoto section">
+                <div class="section-title">
+                    <div class="title">
+                        <h2>New Photo</h2>
+                        <div class="h2-icon"><img src="images/photo.png"></div>
+                    </div>
+                    <div class="desc">
+                        <p>Photograph Salesに新しく登録された写真です。シーズンごとのイベントフォトもこちらから。</p>
+                    </div>
+                </div>
+                <div class="section-body">
+                    <div class="newphoto-pic">
+                        <div class="newphoto-pic-content">
+                            <p><img src="images/sakura.jpg"></p>
+                            <p class="newphoto-pic-tag"># season</p>
+                            <p>都会の季節。田舎の季節。様々な四季の模様を掲載しています。</p>
+                        </div>
+                        <div class="newphoto-pic-content">
+                            <p><img src="images/fujiya.jpg"></p>
+                            <p class="newphoto-pic-tag"># scene</p>
+                            <p>Photograph Salesが特別気になる風景をご紹介！</p>
+                        </div>
+                        <div class="newphoto-pic-content">
+                            <p><img src="images/sirojuji.jpg"></p>
+                            <p class="newphoto-pic-tag"># chillout</p>
+                            <p>ゆっくりむっくり。そんな気分の一枚を集めてみました。</p>
+                        </div>
+                        <div class="newphoto-pic-content">
+                            <p><img src="images/sakura.jpg"></p>
+                            <p class="newphoto-pic-tag"># flower</p>
+                            <p>身近な花から、アレンジメントまで様々なお花の写真です。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="select section">
+                <div class="section-title">
+                    <div class="title">
+                        <h2>Select Category</h2>
+                        <div class="h2-icon"><img src="images/check.png"></div>
+                    </div>
+                    <div class="desc">
+                        <p>色や金額、選択する範囲を絞り込んで検索することができます。</p>
+                    </div>
+                </div>
+                <div class="section-body">
+                    <h3>色で選ぶ</h3>
+                    <ul class="colorlist">
+                        <li><a href="#" class="btn red"></a></li>
+                        <li><a href="#"><img src="images/color/brown.png"></a></li>
+                        <li><a href="#"><img src="images/color/orange.png"></a></li>
+                        <li><a href="#"><img src="images/color/yellow.png"></a></li>
+                        <li><a href="#"><img src="images/color/green.png"></a></li>
+                        <li><a href="#"><img src="images/color/blue.png"></a></li>
+                        <li><a href="#"><img src="images/color/pink.png"></a></li>
+                        <li><a href="#"><img src="images/color/white.png"></a></li>
+                        <li><a href="#"><img src="images/color/black.png"></a></li>
+                    </ul>
+                    <p class="text">フリー写真素材のご利用の際は、必ず利用規約に目を通してください。</p>
+                </div>
+            </section>
+
+            <section class="news section">
+                <div class="section-title">
+                    <div class="title">
+                        <h2>News</h2>
+                        <div class="h2-icon"><img src="images/news.png"></div>
+                    </div>
+                    <div class="desc">
+                        <p>Photograph Salesからのお知らせです。</p>
+                    </div>
+                </div>
+                <div class="section-body">
+                    <div class="news-content">
+                        <p>2017.10.31　写真を１点更新いたしました。</p>
+                        <p>2017.10.20　写真を５点更新いたしました。</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <ul>
+                    <li class="">写真素材を購入する</li>
+                    <li><a href="#">購入手順</a></li>
+                    <li><a href="#">素材の利用可能範囲</a></li>
+                    <li><a href="#">素材一覧</a></li>
+                </ul>
+                <ul>
+                    <li class="">規約など</li>
+                    <li><a href="#">ご利用規約</a></li>
+                    <li><a href="#">運営者概要</a></li>
+                    <li><a href="#">通信販売法と資金決済法の表示</a></li>
+                    <li><a href="#">サイトマップ</a></li>
+                </ul>
+                <ul>
+                    <li class="">SNS / Media</li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+                <a href="#" class="form-contact">お問い合わせフォーム</a>
+            </div>
+            <p><img src="images/footer-logo.png" alt="logo"></p>
+        </footer>
+    </div>
+</body>
+
+</html>

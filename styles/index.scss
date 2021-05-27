@@ -1,0 +1,409 @@
+// Color system
+
+// scss-docs-start color-variables
+$white: #fff !default;
+$gray-100: #ECECEC !default;//検索枠線
+$gray-200: #F1F3F1 !default;//New Photo背景
+$gray-300: #5B5B5B !default;//小見出し
+$black-100: #beb0b0 !default;//会員登録/ログイン、カートを見る
+$black-200: #333333 !default;//基本的なフォント
+$black-300: #000 !default;
+$brown: #56423A !default;
+$red-100: #C1696F !default;
+$red-200: #BE5C63 !default;
+$yellow: #FDEFD2 !default;
+$cream: #F4F3EF !default;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  "white":       $white,
+  "gray":        $gray-200,
+  "gray-right":  $gray-100,
+  "gray-dark":   $gray-300,
+  "black":       $black-200,
+  "black-right": $black-100,
+  "black-dark":  $black-300,
+  "brown":       $brown,
+  "red":         $red-200,
+  "red-right":   $red-100,
+  "yellow":      $yellow,
+  "cream":       $cream
+) !default;
+// scss-docs-end colors-map
+
+// $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
+// $font-size-base effects the font size of the body text$font-size-root:              null !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+$line-height-base:            1.5 !default;
+$line-height-sm:              1.25 !default;
+$line-height-lg:              2 !default;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+// scss-docs-end font-variables
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+) !default;
+// scss-docs-end font-sizes
+
+:root{
+    font-family: "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-size: 16px;
+    line-height: 1em;
+}
+html *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: $white;
+}
+.wrapper {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// body > header,body > main, body > footer{
+//     overflow: hidden;
+// }
+
+a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+ul.menu,.colorlist{
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+}
+nav{
+    margin:auto 0 auto auto;
+}
+nav ul{
+    justify-content: space-between;
+}
+nav ul li > img{
+    margin-right:0.5em;
+    width: auto;
+    height: 20px;
+}
+nav ul li:not(:last-of-type){
+    line-height: 1.2em;
+    padding-right:1.5em;
+}
+h1{
+    font-size: 16px;
+    height:3em;
+    line-height:3em;
+}
+h1 > a{
+    align-items: center;
+    
+    color: rgb(189, 27, 27);
+}
+// h2{
+//     font-size: 2em;
+//     text-align: center;
+//     margin-bottom:1em;
+// }
+h3{
+    display:block;
+    text-align: center;
+    padding:0.5em 0 0.5em 0;
+    width:30%;
+    border-top:solid 2px $gray-100;
+    border-bottom:solid 2px $gray-100;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+// TODO:削除
+.text{
+    text-align: center;
+    margin-bottom:2em;
+}
+
+
+// header
+header{
+    display:flex;
+}
+
+// jumbotron
+.jumbotron{
+    position: relative;
+}
+.jumbotron-img{
+    display: block;
+    // width:960px;
+    height:400px;
+    background-image: url("../images/main_header.jpg");
+    background-position:left top;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+.jumbotron-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%); 
+}
+
+// section
+.section {
+    margin-bottom: 2rem;
+}
+.section-title {
+    display: block;
+    padding: .75rem 1.25rem;
+}
+.section-title .title, .section-title .desc {
+    margin-right: auto;
+    margin-left: auto;
+}
+.section-title .title {
+    display: flex;
+    justify-content: center;
+}
+.section-title .h2-icon {
+    // サイズ指定
+}
+.section-title .h2-icon img{
+    width:100%;
+}
+.section-title .desc p {
+    text-align: center;
+}
+
+.section-body {
+    display: block;
+    padding: 1.25rem;
+}
+
+// section - search
+// TODO: m-autoに修正
+.search{
+    display: flex;
+    margin-top:1.5em;
+    margin-left: auto;
+    width:80%;
+}
+.search-title{
+    display: inline-block;
+    font-weight: bold;
+    background-color: $white;
+    line-height: 3em;    
+    width:15%;
+    height:3em;
+    padding-left: 1em;
+    border-left: 1px $gray-100 solid;
+    border-top: 1px $gray-100 solid;
+    border-bottom: 1px $gray-100 solid;
+    margin-top:0;
+}
+.search-form{
+    display: flex;
+    background-color: $white;
+    width:60%;
+    height:3em;
+    border-right: 1px $gray-100 solid;
+    border-top: 1px $gray-100 solid;
+    border-bottom: 1px $gray-100 solid;
+}
+.search-input{
+    vertical-align: top;
+    margin: 0px;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    width: 85%;
+    padding-left: 10px;
+}
+// #input{
+//     border: none;
+//     width: 85%;
+//     padding-left: 10px;
+// }
+// #submit{
+//     width: 15%;
+//     border: none;
+//     background-image: url(../images/search.png);
+//     background-position: center;
+//     background-size: auto 90%;
+//     background-repeat: no-repeat;
+// }
+
+
+
+
+
+
+// section - pickup
+.pickup .section-title, .pickup .section-body{
+    background: map-get($colors, 'white');
+}
+.random-pic{
+    display:flex;
+}
+.random-pic img{
+    width: 98%;
+    height:auto;
+}
+.random-pic > p{
+    width:calc(100% / 3);
+}
+.random-pic > p:not(:last-of-type){
+    margin-right:5%;
+}
+
+// section - newphoto
+.newphoto .section-title, .newphoto .section-body{
+    background: map-get($colors, 'gray-right');
+}
+.newphoto-pic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.newphoto-pic-content{
+    display: inline-block;
+    text-align: center;
+    width:22%;
+}
+.newphoto-pic-content img{
+    display: block;
+    width:100%;
+}
+.newphoto-pic-content p {
+    margin-bottom: 1em;
+}
+.newphoto-pic-content p:last-of-type {
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
+.newphoto-pic-tag {
+    border:solid 1px rgb(255, 11, 154);
+    background-color: rgb(255, 11, 154);
+    color: rgb(255,255,255);
+    padding:0.5em;
+    display: inline-block;
+    width:100%;
+}
+
+// section - select
+.select .section-body{
+    background: map-get($colors, 'cream');
+}
+.colorlist{
+    margin-top:2em;
+    margin-bottom:3em;
+}
+.colorlist li:not(:last-of-type){
+    margin-right:0.5em;
+}
+
+// section - news
+.news-content p{
+    line-height: 2em;
+    text-align: center;
+}
+// TODO: ボタン作成の試作途中
+.btn{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.47);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 3px #928f8f;
+    border: solid 2px rgba(255, 255, 255, 0.47);
+    transition: .4s;
+}
+.red{
+    background: map-get($colors, 'red');
+}
+
+// footer
+footer{
+    margin-top:5em;
+    background-color: $brown;
+    width:100%;
+    height:auto;
+    color: rgb(255,255,255);
+}
+.footer-container{
+    display: flex;
+    justify-content:space-around;
+    width:960px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+footer ul{
+    list-style: none;
+    color: rgb(255,255,255);
+    width:25%;
+    padding:1em;
+}
+footer ul:not(:last-of-type){
+    margin-right:5em;
+}
+footer ul li:not(:first-of-type){
+    margin-bottom:1em;
+    font-size: 0.8em;
+}
+footer ul li:first-of-type{
+    border-bottom:2px dotted rgb(255, 255, 255);
+    margin-bottom: 0.5em;
+    padding:0.5em 0 0.5em 0;
+}
+footer  a{
+    color: rgb(255,255,255);
+}
+footer p{
+    text-align: center;
+}
+footer img{
+    width:20%;
+    margin-bottom:1em;
+}
+.form-contact{
+    border:solid 1px rgb(255, 11, 154);
+    background-color: rgb(255, 11, 154);
+    width:20%;
+    height:10%;
+    padding:1em;
+    border-radius: 0.5em;
+    margin:1em;
+    font-size:0.8em;
+}
